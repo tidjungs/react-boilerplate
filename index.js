@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import './index.scss'
+import index from './index.scss'
 
 export default class HelloWorld extends Component {
 	render() {
 		return (
-			<h1>Hello World</h1>
+			<h1 className={index.greeting}>Hello World</h1>
 		)
 	}
 }
