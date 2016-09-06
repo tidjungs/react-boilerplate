@@ -6,6 +6,12 @@ starter react project
 npm install
 npm start
 ```
+
+### API
+```
+start-dev-api
+```
+
 ### Credit
 https://www.babelcoder.com/
 
