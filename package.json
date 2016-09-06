@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline"
+    "start": "npm-run-all --parallel start-dev-api start-dev-ui",
+    "start-dev-api": "json-server --watch api/db.json --routes api/routes.json --port 5000",
+    "start-dev-ui": "webpack-dev-server --hot --inline"
   },
   "author": "Waewprach Suthirawut",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "css-loader": "^0.24.0",
     "json-server": "^0.8.19",
     "node-sass": "^3.8.0",
+    "npm-run-all": "^3.1.0",
     "postcss-loader": "^0.11.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
@@ -29,6 +32,7 @@
   "dependencies": {
     "babel-runtime": "^6.6.1",
     "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "react-router": "^2.7.0"
   }
 }

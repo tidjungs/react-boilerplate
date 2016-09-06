@@ -9,7 +9,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	devtool: 'eval',
-	entry: './index.js',
+	entry: './ui/main.js',
 	output: {
 		publicPath: '/static/',
 		path: path.join(__dirname, 'static'),
@@ -54,6 +54,7 @@ module.exports = {
 		]
 	},
 	devServer: {
+		historyApiFallback: true,
 		quiet: true
 	},
 	plugins: [

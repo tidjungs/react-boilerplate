@@ -16,3 +16,5 @@ Local CSS
 ### Add Libary
 https://github.com/FormidableLabs/webpack-dashboard
 auto-prefixer
+json-server
+npm-run-all "paralel npm run"
