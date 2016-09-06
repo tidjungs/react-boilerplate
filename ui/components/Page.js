@@ -1,12 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 export default class Page extends Component {
+	
+	static propTypes = {
+		title: PropTypes.string.isRequired,
+		id: PropTypes.number.isRequired
+	}
+
 	render() {
-		const { page } = this.props
+		const { id, title } = this.props
 		return (
-			<tr key={ page.id }>
-				<th>{page.id}</th>
-	         	<td>{page.title}</td>
+			<tr>
+				<th>{ id }</th>
+	         	<td>{ title }</td>
 	         	<td>
 	         		<a href='javascript:void(0)'>Show</a>
 	         	</td>

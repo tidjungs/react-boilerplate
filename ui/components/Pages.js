@@ -16,8 +16,10 @@ export default class Pages extends Component {
 
 	render() {
 		
-		const rowElement = this.state.pages.map((page, id) => 
-			<Page page={ page } key={ id } />
+		const rowElement = this.state.pages.map((page) => 
+			<Page title={ page.title } 
+				key={ page.id }
+				id={ page.id } />
 		)
 
 		return (
