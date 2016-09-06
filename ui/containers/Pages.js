@@ -9,7 +9,7 @@ export default class PagesContainer extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://127.0.0.1:5000/api/v1/pages')
+		fetch('/api/v1/pages')
 		.then((response) => response.json())
 		.then((pages) => this.setState({ pages }))
 	}
