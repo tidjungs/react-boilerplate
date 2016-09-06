@@ -9,6 +9,10 @@ export default class PagesContainer extends Component {
 		pages: []
 	}
 
+	shouldComponentUpdate(_nextProps, nextState) {
+    	return this.state.pages !== nextState.pages;
+  	}
+
 	onReloadPages = () => {
 		fetch(PAGES_ENDPOINT)
 			.then((response) => response.json())
