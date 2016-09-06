@@ -11,7 +11,7 @@ module.exports = {
 	devtool: 'eval',
 	entry: [
 		'./ui/main.js',
-		'./ui/theme/elements.scss' // for global css
+		'./ui/theme/element.scss' // for global css
 	],
 	output: {
 		publicPath: '/static/',
