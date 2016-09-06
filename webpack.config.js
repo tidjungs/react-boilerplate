@@ -9,7 +9,10 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	devtool: 'eval',
-	entry: './ui/main.js',
+	entry: [
+		'./ui/main.js',
+		'./ui/theme/elements.scss' // for global css
+	],
 	output: {
 		publicPath: '/static/',
 		path: path.join(__dirname, 'static'),

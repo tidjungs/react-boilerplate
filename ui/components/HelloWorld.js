@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import index from './index.scss'
+import styles from './index.scss'
 
 export default class HelloWorld extends Component {
 	render() {
 		return (
-			<h1 className={index.greeting}>Hello World</h1>
+			<h1 className={styles.greeting}>Hello World</h1>
 		)
 	}
 }
