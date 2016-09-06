@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import {
 	App,
 	HelloWorld,
-	Page
+	Pages
 } from './components'
 
 export default () => {
@@ -11,7 +11,7 @@ export default () => {
     <Router history={ browserHistory }>
       <Route path='/' component={ App }>
         <IndexRoute component={ HelloWorld } />
-        <route path='page' component={ Page } />
+        <route path='page' component={ Pages } />
       </Route>
     </Router>
   )
