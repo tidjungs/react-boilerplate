@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import '../theme/element.scss'
-
 
 export default class Page extends Component {
 	render() {
