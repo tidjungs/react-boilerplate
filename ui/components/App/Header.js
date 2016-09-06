@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import styles from './Header.scss'
 
 export default class Header extends Component {
@@ -6,12 +7,18 @@ export default class Header extends Component {
 		return (
 			<header className={ styles.header }>
 				<nav>
-					<a href='/' className={ styles.brand }>
+					<Link 
+						to={{ pathname: '/' }} 
+						className={ styles.brand }>
 						Tidjungs React Boilerplate
-					</a>
+					</Link>
 					<ul className={ styles.menu }>
 						<li className={ styles.menu__item }>
-							<a href='/page' className={ styles.menu__link }>Page</a>
+							<Link
+								to={{ pathname: '/page' }}  
+								className={ styles.menu__link }>
+								Page
+							</Link>
 						</li>
 					</ul>
 				</nav>

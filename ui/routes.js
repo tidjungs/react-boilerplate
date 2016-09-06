@@ -9,11 +9,9 @@ import {
 export default () => {
   return (
     <Router history={ browserHistory }>
-      <Route path='/'
-             component={ App }>
+      <Route path='/' component={ App }>
         <IndexRoute component={ HelloWorld } />
-        <route path='page'
-               component={ Page } />
+        <route path='page' component={ Page } />
       </Route>
     </Router>
   )

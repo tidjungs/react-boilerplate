@@ -11,7 +11,9 @@ https://www.babelcoder.com/
 
 ### Assets
 CSS & SCSS Loader
-Local CSS
+Local CSS ( hash )
+Global CSS
+
 
 ### Add Libary
 https://github.com/FormidableLabs/webpack-dashboard
