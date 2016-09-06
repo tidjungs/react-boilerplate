@@ -10,14 +10,15 @@ npm start
 https://www.babelcoder.com/
 
 ### Assets
-CSS & SCSS Loader
-Local CSS ( hash )
-Global CSS
+- CSS & SCSS Loader
+- Local CSS
+- Global CSS
 
 
-### Add Libary
-https://github.com/FormidableLabs/webpack-dashboard.
-auto-prefixer.
-json-server
-npm-run-all "paralel npm run"
-isomorphic-fetch
+### Libary (other from react setup)
+- [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard)
+- [auto-prefixer](https://github.com/postcss/autoprefixer)
+- [json-server](https://github.com/typicode/json-server)
+- [npm-run-all](https://github.com/mysticatea/npm-run-all)
+- [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
+
