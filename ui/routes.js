@@ -3,8 +3,8 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import {
 	App,
 	HelloWorld,
-	Pages
 } from './components'
+import { Pages } from './containers'
 
 export default () => {
   return (
