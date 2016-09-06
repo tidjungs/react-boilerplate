@@ -9,7 +9,7 @@ npm start
 
 ### API
 ```
-start-dev-api
+npm run start-dev-api
 ```
 
 ### Credit
