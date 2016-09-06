@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import fetch from 'isomorphic-fetch'
 import { Pages } from '../components'
+import { PAGES_ENDPOINT } from '../constants/endpoints'
 
 export default class PagesContainer extends Component {
 
@@ -8,13 +9,21 @@ export default class PagesContainer extends Component {
 		pages: []
 	}
 
+	onReloadPages = () => {
+		fetch(PAGES_ENDPOINT)
+			.then((response) => response.json())
+			.then((pages) => this.setState({ pages }))
+	}
+
 	componentDidMount() {
-		fetch('/api/v1/pages')
-		.then((response) => response.json())
-		.then((pages) => this.setState({ pages }))
+		this.onReloadPages()
 	}
 
 	render() {
-    	return <Pages pages={this.state.pages} />
+    	return( 
+    		<Pages 
+    			pages={ this.state.pages } 
+    			onReloadPages={ this.onReloadPages } />
+    	)
  	}
 }
