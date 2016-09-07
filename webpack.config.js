@@ -10,6 +10,9 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
 	devtool: 'eval',
 	entry: [
+		'react-hot-loader/patch',
+    	'webpack-dev-server/client?http://localhost:8080',
+    	'webpack/hot/only-dev-server',
 		'./ui/main.js',
 		'./ui/theme/element.scss' // for global css
 	],
@@ -57,6 +60,8 @@ module.exports = {
 		]
 	},
 	devServer: {
+		hot: true,
+		inline: false,
 		historyApiFallback: true,
 		quiet: true,
 		proxy: {
@@ -66,6 +71,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
 		new DashboardPlugin(dashboard.setData)
     ],
     postcss: function () {
