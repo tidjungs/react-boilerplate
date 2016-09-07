@@ -4,14 +4,20 @@ import {
 	App,
 	HelloWorld,
 } from './components'
-import { Pages } from './containers'
+import { 
+  Pages,
+  ShowPage
+} from './containers'
 
 export default () => {
   return (
     <Router history={ browserHistory }>
       <Route path='/' component={ App }>
         <IndexRoute component={ HelloWorld } />
-        <route path='page' component={ Pages } />
+        <route path='pages'>
+          <IndexRoute component={ Pages } />
+          <route path=':id' component={ ShowPage } />
+        </route>
       </Route>
     </Router>
   )

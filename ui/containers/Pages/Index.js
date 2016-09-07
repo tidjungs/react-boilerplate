@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import fetch from 'isomorphic-fetch'
-import { Pages } from '../components'
-import { PAGES_ENDPOINT } from '../constants/endpoints'
+import { Pages } from '../../components'
+import { PAGES_ENDPOINT } from '../../constants/endpoints'
 
 export default class PagesContainer extends Component {
 
@@ -22,7 +22,7 @@ export default class PagesContainer extends Component {
 	componentDidMount() {
 		this.onReloadPages()
 	}
-
+	
 	render() {
     	return( 
     		<Pages 

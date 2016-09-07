@@ -15,10 +15,13 @@ export default class Header extends Component {
 					<ul className={ styles.menu }>
 						<li className={ styles.menu__item }>
 							<Link
-								to={{ pathname: '/page' }}  
+								to={{ pathname: '/pages' }}  
 								className={ styles.menu__link }>
-								Page
+								All pages
 							</Link>
+						</li>
+						<li className={ styles.menu__item }>
+							<a className={ styles.menu__link } >About us</a>
 						</li>
 					</ul>
 				</nav>

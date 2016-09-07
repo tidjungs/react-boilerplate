@@ -9,7 +9,7 @@ export default class HelloWorld extends Component {
 
 	render() {
 		return (
-			<h1 className={styles.greeting}>Hello { this.props.message }</h1>
+			<h1 className={styles.greeting}>Welcome to { this.props.message } React Boilerplate</h1>
 		)
 	}
 }
