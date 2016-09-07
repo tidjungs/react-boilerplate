@@ -27,4 +27,4 @@ https://www.babelcoder.com/
 - [json-server](https://github.com/typicode/json-server)
 - [npm-run-all](https://github.com/mysticatea/npm-run-all)
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
-
+- react-hot-loader
