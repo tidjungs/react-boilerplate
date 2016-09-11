@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import fetch from 'isomorphic-fetch'
 import { Pages } from '../../components'
-import { PAGES_ENDPOINT } from '../../constants/endpoints'
 
 //actions
 import { loadPage } from '../../actions/page'
 
 class PagesContainer extends Component {
-
-	// state = {
-	// 	pages: []
-	// }
+	static propTypes = {
+    	pages: PropTypes.array.isRequired,
+    	onLoadPages: PropTypes.func.isRequired
+  	}
 
 	shouldComponentUpdate(nextProps) {
     	return this.props.pages !== nextProps.pages;
@@ -19,9 +18,6 @@ class PagesContainer extends Component {
 
 	onReloadPages = () => {
 		this.props.onLoadPages()
-		// fetch(PAGES_ENDPOINT)
-		// 	.then((response) => response.json())
-		// 	.then((pages) => this.setState({ pages }))
 	}
 
 	componentDidMount() {
