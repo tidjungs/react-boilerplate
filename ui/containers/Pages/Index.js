@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch'
 import { Pages } from '../../components'
 
 //actions
-import { loadPage } from '../../actions/page'
+import { loadPages } from '../../actions/page'
 
 class PagesContainer extends Component {
 	static propTypes = {
@@ -39,7 +39,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onLoadPages() {    
-  	dispatch(loadPage())
+  	dispatch(loadPages())
   }
 })
 

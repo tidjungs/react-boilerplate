@@ -1,24 +1,18 @@
-import fetch from 'isomorphic-fetch'
+import { CALL_API } from 'redux-api-middleware'
 import { PAGES_ENDPOINT } from '../constants/endpoints'
 
-export const loadPage = () => {
-  return (dispatch) => {
-    dispatch({
-      type: 'LOAD_PAGES_REQUEST'
-    })
-
-    fetch(PAGES_ENDPOINT)
-      .then((response) => response.json())
-      .then(
-
-        (pages) => dispatch({
-          type: 'LOAD_PAGES_SUCCESS',
-          pages
-        }),
-
-        (error) => dispatch({
-          type: 'LOAD_PAGES_FAILURE'
-        })
-      )
+export const loadPages = () => ({
+  [CALL_API]: {
+    endpoint: PAGES_ENDPOINT,
+    method: 'GET',
+    types: ['LOAD_PAGES_REQUEST', 'LOAD_PAGES_SUCCESS', 'LOAD_PAGES_FAILURE']
   }
-}
+})
+
+export const loadPage = (id) => ({
+  [CALL_API]: {
+    endpoint: `${PAGES_ENDPOINT}/${id}`,
+    method: 'GET',
+    types: ['LOAD_PAGE_REQUEST', 'LOAD_PAGE_SUCCESS', 'LOAD_PAGE_FAILURE']
+  }
+})
