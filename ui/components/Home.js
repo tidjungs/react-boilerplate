@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './index.scss'
 
-export default class HelloWorld extends Component {
+export default class Home extends Component {
 
 	static defaultProps = {
 		message: 'Tidjungs'

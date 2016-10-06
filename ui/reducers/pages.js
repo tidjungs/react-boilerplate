@@ -19,3 +19,5 @@ export default (state = initialState, action) => {
 export const getPageById = (state, id) => (
 	state.pages.find((page) => page.id === +id) || { title: '', content: '' }
 )
+
+	
