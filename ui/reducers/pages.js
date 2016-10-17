@@ -6,14 +6,14 @@ import {
 const initialState = []
 
 export default (state = initialState, action) => {
-  	switch(action.type) {
-    	case LOAD_PAGES_SUCCESS:
-      		return action.payload
-    	case LOAD_PAGE_SUCCESS:
-      		return [action.payload]
-    	default:
-      		return state
-  	}
+	switch(action.type) {
+  	case LOAD_PAGES_SUCCESS:
+    	return action.payload
+  	case LOAD_PAGE_SUCCESS:
+    	return [action.payload]
+  	default:
+    	return state
+	}
 }
 
 export const getPageById = (state, id) => (
